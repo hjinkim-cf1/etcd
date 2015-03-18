@@ -21,8 +21,9 @@ type Stresser interface {
 
 type stresser struct {
 	Endpoint string
-	// TODO: not implemented
-	SuffixRange int
+
+	KeySize        int
+	KeySuffixRange int
 
 	N int
 	// TODO: not implemented

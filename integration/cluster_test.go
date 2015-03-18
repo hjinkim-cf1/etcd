@@ -360,7 +360,16 @@ func (c *cluster) RemoveMember(t *testing.T, id uint64) {
 
 func (c *cluster) Terminate(t *testing.T) {
 	for _, m := range c.Members {
-		m.Terminate(t)
+		m.s.Stop()
+	}
+	for _, m := range c.Members {
+		for _, hs := range m.hss {
+			hs.CloseClientConnections()
+			hs.Close()
+		}
+		if err := os.RemoveAll(m.ServerConfig.DataDir); err != nil {
+			t.Fatal(err)
+		}
 	}
 }
 
