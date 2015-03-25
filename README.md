@@ -1,6 +1,6 @@
 # etcd
 
-[![Build Status](https://travis-ci.org/coreos/etcd.png?branch=master)](https://travis-ci.org/coreos/etcd)
+[![Build Status](https://travis-ci.org/hjinkim-cf1/etcd.png?branch=master)](https://travis-ci.org/hjinkim-cf1/etcd)
 [![Docker Repository on Quay.io](https://quay.io/repository/coreos/etcd-git/status "Docker Repository on Quay.io")](https://quay.io/repository/coreos/etcd-git)
 
 ![etcd Logo](logos/etcd-horizontal-color.png)
